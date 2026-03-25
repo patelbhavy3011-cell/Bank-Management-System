@@ -85,6 +85,6 @@ int main() {
 
     cout << "Thank you!\n";
     return 0;
-5. Conclusion
+#5. Conclusion
 
 This project demonstrates a simple banking system using C++. It helps beginners understand how real-world applications work using basic programming constructs. The program can be expanded with more features like multiple users and file storage.
