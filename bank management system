@@ -1,0 +1,49 @@
+// file: simple_bank.cpp
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    string name;
+    float balance = 0;
+    int choice;
+    float amount;
+
+    cout << "Enter your name: ";
+    cin >> name;
+
+    do {
+        cout << "\n--- Simple Bank ---\n";
+        cout << "1. Deposit\n";
+        cout << "2. Withdraw\n";
+        cout << "3. Check Balance\n";
+        cout << "4. Exit\n";
+        cout << "Enter choice: ";
+        cin >> choice;
+
+        if (choice == 1) {
+            cout << "Enter amount: ";
+            cin >> amount;
+            balance += amount;
+            cout << "Deposited!\n";
+        }
+        else if (choice == 2) {
+            cout << "Enter amount: ";
+            cin >> amount;
+            if (amount <= balance) {
+                balance -= amount;
+                cout << "Withdrawn!\n";
+            } else {
+                cout << "Not enough balance!\n";
+            }
+        }
+        else if (choice == 3) {
+            cout << "Name: " << name << endl;
+            cout << "Balance: " << balance << endl;
+        }
+
+    } while (choice != 4);
+
+    cout << "Thank you!\n";
+    return 0;
+}
